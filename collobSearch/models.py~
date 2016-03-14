@@ -23,8 +23,11 @@ class UrlMap(models.Model):
     def publish(self):
         self.save()
 
+    def __init__(self):
+        self.count = 0
     def __str__(self):
-        return self.areaOfInterest
+        self.count = self.count + 1
+        return "UrlMap"+self.count
 
 class KeyVal(models.Model):
     aoi = models.ForeignKey(UrlMap, db_index=True)
