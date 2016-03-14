@@ -25,7 +25,7 @@ class Searcher(models.Model):
     password = models.CharField(max_length=20)
     areaOfInterest = models.CharField(max_length=50)
     expertise = models.IntegerField()
-    urls = UrlMap()
+    urlmap = models.ForeignKey(UrlMap, db_index=True)
 
     def publish(self):
         expertise = 0
