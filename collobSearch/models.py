@@ -24,7 +24,7 @@ class UrlMap(models.Model):
         self.save()
 
     def __str__(self):
-        return self.areaOfInterest
+        return self.username+','+self.areaOfInterest
 
 class KeyVal(models.Model):
     aoi = models.ForeignKey(UrlMap, db_index=True)

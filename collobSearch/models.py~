@@ -19,7 +19,7 @@ class Searcher(models.Model):
 
 class UrlMap(models.Model):
     areaOfInterest  = models.CharField(max_length=50)
-    username = models.ForeignKey(Searcher, db_index=True) 
+    username = models.ForeignKey(Searcher, db_index=True, null=True) 
     def publish(self):
         self.save()
 
