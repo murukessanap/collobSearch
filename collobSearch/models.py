@@ -3,7 +3,7 @@ from django.db import models
 #from django.utils import timezone
 
 class UrlMap(models.Model):
-    areaOfInterest      = models.CharField(max_length=50)
+    areaOfInterest  = models.CharField(max_length=50)
 
 class KeyVal(models.Model):
     aoi = models.ForeignKey(UrlMap, db_index=True)
