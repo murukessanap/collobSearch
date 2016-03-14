@@ -18,8 +18,6 @@ class KeyVal(models.Model):
     def publish(self):
         self.save()
 
-    def __str__(self):
-        return self.aoi
 
 class Searcher(models.Model):
     #author = models.ForeignKey('auth.User')
