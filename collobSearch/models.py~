@@ -6,7 +6,7 @@ class UrlMap(models.Model):
     areaOfInterest      = models.CharField(max_length=50)
 
 class KeyVal(models.Model):
-    aoi = models.ForeignKey(Urls, db_index=True)
+    aoi = models.ForeignKey(UrlMap, db_index=True)
     url     = models.CharField(max_length=240, db_index=True)
 
 
