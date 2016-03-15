@@ -20,14 +20,12 @@ class Searcher(models.Model):
 class UrlMap(models.Model):
     areaOfInterest  = models.CharField(max_length=50)
     username = models.ForeignKey(Searcher, db_index=True, null=True) 
+
     def publish(self):
         self.save()
 
-    def __init__(self):
-        self.count = 0
     def __str__(self):
-        self.count = self.count + 1
-        return "UrlMap"+self.count
+        return "UrlMap"
 
 class KeyVal(models.Model):
     aoi = models.ForeignKey(UrlMap, db_index=True)
@@ -35,9 +33,7 @@ class KeyVal(models.Model):
 
     def publish(self):
         self.save()
-    def __init__(self):
-        self.count = 0
+
     def __str__(self):
-        self.count = self.count + 1
-        return "KeyVal"+self.count
+        return "KeyVal"
 
