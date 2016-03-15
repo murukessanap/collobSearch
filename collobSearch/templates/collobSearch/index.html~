@@ -1,0 +1,13 @@
+<html>
+    <head>
+      <title>Home page of CollobSearch</title>
+    </head>
+    <body>
+      <a href="www.google.com">GOOGLE</a>
+      <br />
+      <a href="www.yahoo.com">YAHOO</a>
+      <br />
+      <a href="www.facebook.com">FACEBOOK</a>
+      <br />
+    </body>
+</html>

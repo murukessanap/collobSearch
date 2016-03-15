@@ -19,6 +19,6 @@ from django.conf.urls import include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^collobSearch/', include('collobSearch.urls')),
+    url(r'', include('collobSearch.urls')),
     url(r'^admin/', admin.site.urls),
 ]
