@@ -4,7 +4,7 @@ from django.db import models
 
 class Searcher(models.Model):
     #author = models.ForeignKey('auth.User')
-    username = models.CharField(max_length=20)
+    username = models.CharField(primary_key=True,max_length=20)
     password = models.CharField(max_length=20)
     areaOfInterest = models.CharField(max_length=50)
     expertise = models.IntegerField()
@@ -19,9 +19,13 @@ class Searcher(models.Model):
 
    
 class UrlMap(models.Model):
+    id = models.AutoField(primary_key=True)
+    searcher = models.ForeignKey(Searcher, db_index=True) 
     areaOfInterest  = models.CharField(max_length=50)
-    searcher = models.ForeignKey(Searcher, db_index=True, null=True) 
 
+    class Meta:
+        unique_together = (('searcher', 'areaOfInterest'),)
+    
     def publish(self):
         self.save()
 
@@ -31,8 +35,12 @@ class UrlMap(models.Model):
     
 
 class KeyVal(models.Model):
+    id = models.AutoField(primary_key=True)
     urlmap = models.ForeignKey(UrlMap, db_index=True)
-    url = models.CharField(max_length=240, db_index=True)
+    url = models.CharField(max_length=240)
+
+    class Meta:
+        unique_together = (('urlmap', 'url'),)
 
     def publish(self):
         self.save()
