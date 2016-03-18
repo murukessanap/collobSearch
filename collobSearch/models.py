@@ -30,7 +30,7 @@ class UrlMap(models.Model):
         self.save()
 
     def __str__(self):
-        return self.areaOfInterest
+        return self.areaOfInterest + self.id
 
     
 
@@ -46,5 +46,5 @@ class KeyVal(models.Model):
         self.save()
 
     def __str__(self):
-        return self.url
+        return self.url + self.id
    
