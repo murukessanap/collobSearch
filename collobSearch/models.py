@@ -17,22 +17,22 @@ class Searcher(models.Model):
     def __str__(self):
         return self.username
 
-   
+
 class UrlMap(models.Model):
     id = models.AutoField(primary_key=True)
-    searcher = models.ForeignKey(Searcher, db_index=True) 
+    searcher = models.ForeignKey(Searcher, db_index=True)
     areaOfInterest  = models.CharField(max_length=50)
 
     class Meta:
         unique_together = (('searcher', 'areaOfInterest'),)
-    
+
     def publish(self):
         self.save()
 
     def __str__(self):
-        return self.areaOfInterest + self.id
+        return self.areaOfInterest + str(self.id)
 
-    
+
 
 class KeyVal(models.Model):
     id = models.AutoField(primary_key=True)
@@ -46,5 +46,5 @@ class KeyVal(models.Model):
         self.save()
 
     def __str__(self):
-        return self.url + self.id
-   
+        return self.url + str(self.id)
+
