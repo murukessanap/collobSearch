@@ -3,11 +3,15 @@
       <title>Home page of CollobSearch</title>
     </head>
     <body>
-      <a href="https://www.google.com">GOOGLE</a>
-      <br />
-      <a href="https://www.yahoo.com">YAHOO</a>
-      <br />
-      <a href="https://www.facebook.com">FACEBOOK</a>
-      <br />
+      <div>
+        <h1><a href="/">List Of URLS</a></h1>
+      </div>
+
+     {% for d in data %}
+       <div>
+        <h1> {{ d }}</h1>
+        <!--<h1>aoi: {{ val_i }}</h1>-->
+       </div>
+     {% endfor %}
     </body>
 </html>
