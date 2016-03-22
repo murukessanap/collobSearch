@@ -1,0 +1,16 @@
+<html>
+    <head>
+      <title>Home page of CollobSearch</title>
+    </head>
+    <body>
+      <div>
+        <h1><a href="/">Login</a></h1>
+      </div>
+
+     <form method="POST" class="login-form">{% csrf_token %}
+        {{ form.username }}
+        {{ form.password }}
+        <button type="submit" class="">login</button>
+    </form>
+    </body>
+</html>

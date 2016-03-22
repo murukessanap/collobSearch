@@ -1,0 +1,100 @@
+[22/Mar/2016 01:41:38] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[22/Mar/2016 01:41:38] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Mar/2016 01:42:02] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[22/Mar/2016 01:42:02] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Mar/2016 01:42:08] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[22/Mar/2016 01:42:08] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Mar/2016 01:54:21] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "collobSearch_searcher" WHERE "collobSearch_searcher"."username" = 'rama' LIMIT 1; args=('rama',)
+[22/Mar/2016 02:14:34] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "collobSearch_searcher" WHERE "collobSearch_searcher"."username" = 'wed' LIMIT 1; args=('wed',)
+[22/Mar/2016 11:15:50] DEBUG [django.db.backends:89] (0.061) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[22/Mar/2016 11:15:50] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Mar/2016 11:15:56] WARNING [django.request:182] Not Found: /favicon.ico
+[22/Mar/2016 11:15:56] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/urls.py'> (None:None) >, <RegexURLPattern index ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[22/Mar/2016 14:22:51] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[22/Mar/2016 14:22:51] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Mar/2016 14:22:54] WARNING [django.request:182] Not Found: /favicon.ico
+[22/Mar/2016 14:22:54] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/urls.py'> (None:None) >, <RegexURLPattern index ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[22/Mar/2016 14:22:59] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "collobSearch_searcher" WHERE "collobSearch_searcher"."username" = 'muru' LIMIT 1; args=('muru',)

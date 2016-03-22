@@ -7,10 +7,14 @@
         <h1><a href="/">List Of URLS</a></h1>
       </div>
 
-     {% for d in data %}
+     {% for k,d in data.items %}
        <div>
-        <h1> {{ d }}</h1>
-        <!--<h1>aoi: {{ val_i }}</h1>-->
+        <h1>username:: {{ k }}</h1>
+        <ol>
+        {% for u in d %}
+          <li><h4>{{ u }}</h4></li>
+        {% endfor %}
+        </ol>
        </div>
      {% endfor %}
     </body>

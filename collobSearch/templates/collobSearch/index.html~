@@ -3,11 +3,19 @@
       <title>Home page of CollobSearch</title>
     </head>
     <body>
-      <a href="www.google.com">GOOGLE</a>
-      <br />
-      <a href="www.yahoo.com">YAHOO</a>
-      <br />
-      <a href="www.facebook.com">FACEBOOK</a>
-      <br />
+      <div>
+        <h1><a href="/">List Of URLS</a></h1>
+      </div>
+
+     {% for k,d in data.items %}
+       <div>
+        <h1>username:: {{ k }}</h1>
+        <li>
+        {% for u in d %}
+          <h2>{{ u }}</h2>
+        {% endfor %}
+        </li>
+       </div>
+     {% endfor %}
     </body>
 </html>
