@@ -7,7 +7,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from collobSearch.models import KeyVal
 from collobSearch.models import UrlMap
-from collobSearch.models import Searcher
+#from collobSearch.models import Searcher
+from accounts.models import User
 from .forms import LoginForm
 
 @login_required(login_url='/')
@@ -23,14 +24,14 @@ def urlList(request):
             for u in urls:
                 data.append((s.username,um.areaOfInterest,u.url))'''
     data={}
-    searchers=Searcher.objects.all()
+    searchers=User.objects.all()
     for s in searchers:
-        data[s.username]=[]
+        data[s.email]=[]
         urlMaps=UrlMap.objects.filter(searcher=s)
         for um in urlMaps:
             urls=KeyVal.objects.filter(urlmap=um)
             for u in urls:
-                data[s.username].append((um.areaOfInterest,u.url))
+                data[s.email].append((um.areaOfInterest,u.url))
     #print(data)
     #searchers=Searcher.objects.all()
     return render(request, 'collobSearch/index.html', {'data':data})
@@ -44,7 +45,7 @@ def index(request):
             #post.author = request.user
             #post.published_date = timezone.now()
             #post.save()
-            if Searcher.objects.get(username=form.username):
+            if User.objects.get(email=form.email):
               return render(request, 'collobSearch/success.html', {'form':form})
             else:
               return render(request, 'collobSearch/failure.html', {'form':form})
@@ -55,12 +56,12 @@ def index(request):
 
 def login_user(request):
     logout(request)
-    username = password = ''
+    email = password = ''
     if request.POST:
-        username = request.POST['username']
+        email = request.POST['email']
         password = request.POST['password']
 
-        user = authenticate(username=username, password=password)
+        user = authenticate(email=email, password=password)
         if user is not None:
             if user.is_active:
                 login(request, user)

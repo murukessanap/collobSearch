@@ -6,4 +6,4 @@ class LoginForm(forms.ModelForm):
 
     class Meta:
         model = Searcher
-        fields = ('username', 'password',)
+        fields = ('username', 'password', 'areaOfInterest',)

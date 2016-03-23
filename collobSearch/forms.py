@@ -1,9 +1,10 @@
 from django import forms
 
-from .models import Searcher
+#from .models import Searcher
+from accounts.models import User
 
 class LoginForm(forms.ModelForm):
 
     class Meta:
-        model = Searcher
-        fields = ('username', 'password', 'areaOfInterest',)
+        model = User
+        fields = ('email', 'password', 'area_of_interest',)

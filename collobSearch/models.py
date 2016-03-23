@@ -1,8 +1,9 @@
 from django.db import models
+from accounts.models import User
 #from django.contrib.postgres.fields import JSONField
 #from django.utils import timezone
 
-class Searcher(models.Model):
+'''class Searcher(models.Model):
     #author = models.ForeignKey('auth.User')
     username = models.CharField(primary_key=True,max_length=20)
     password = models.CharField(max_length=20)
@@ -15,12 +16,12 @@ class Searcher(models.Model):
         self.save()
 
     def __str__(self):
-        return self.username
+        return self.username'''
 
 
 class UrlMap(models.Model):
     id = models.AutoField(primary_key=True)
-    searcher = models.ForeignKey(Searcher, db_index=True)
+    searcher = models.ForeignKey(User, db_index=True)
     areaOfInterest  = models.CharField(max_length=50)
 
     class Meta:
