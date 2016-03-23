@@ -152,7 +152,7 @@ LOGGING = {
             'propagate': True,
             'level':'DEBUG',
         },
-        'MYAPP': {
+        'collobSearch': {
             'handlers': ['file'],
             'level': 'DEBUG',
         },
