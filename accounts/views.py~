@@ -15,7 +15,7 @@ def index(request):
             #  return HttpResponseRedirect('/accounts/failure/')
             #else:
             form.save()
-            return HttpResponseRedirect('/accounts/success/')
+            return HttpResponseRedirect('/register/success/')
         #else:
         #    return render(request, 'accounts/index.html', {'form':form})
     else:    
