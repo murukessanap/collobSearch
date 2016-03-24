@@ -10,6 +10,7 @@ from collobSearch.models import UrlMap
 #from collobSearch.models import Searcher
 from accounts.models import User
 from .forms import LoginForm
+import google
 
 @login_required(login_url='/')
 def urlList(request):
@@ -35,6 +36,26 @@ def urlList(request):
     #print(data)
     #searchers=Searcher.objects.all()
     return render(request, 'collobSearch/index.html', {'data':data})
+
+
+@login_required(login_url='/')
+def searchQuery(request):
+    return render(request, 'collobSearch/gsearch.html', {})
+
+@login_required(login_url='/')
+def googleList(request):
+    urls=[]
+    query=""
+    if request.POST:
+        query=request.POST.get("query", "")
+    count=50
+    i=0
+    for url in google.search(query):
+        urls.append(url)
+        i=i+1
+        if count==i:
+          break
+    return render(request, 'collobSearch/gresult.html', {'urls':urls})
 
 def index(request):
     #return render(request, 'collobSearch/failure.html', {})
@@ -65,9 +86,13 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect('/main/')
+                #return HttpResponseRedirect('/main/')
+                return HttpResponseRedirect('/search/')
     return render_to_response('collobSearch/login.html', context_instance=RequestContext(request))
 
-@login_required(login_url='/')
+'''@login_required(login_url='/')
 def main(request):
-    return HttpResponseRedirect('/urls/')
+    str=""
+    if request.POST:
+        str=request.POST.get("query", "")
+    return HttpResponseRedirect('/g',{'str':str})'''

@@ -9591,3 +9591,673 @@ Traceback (most recent call last):
   File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
     (bit, current))  # missing attribute
 django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'False\': False, \'None\': None, \'True\': True}, {\'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f607c7d9630>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f607caf7a90>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f607d5721d0>, \'request\': <WSGIRequest: GET \'/\'>, \'csrf_token\': <SimpleLazyObject: \'GmWZtr3XsdEBCrQbRpTceyqiaQHPeHMo\'>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f607c7ddc18>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:07:20] DEBUG [django.db.backends:89] (0.045) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:07:20] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:07:25] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: \'GmWZtr3XsdEBCrQbRpTceyqiaQHPeHMo\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7ffe31c25978>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7ffe31c25e80>, \'request\': <WSGIRequest: GET \'/\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'WARNING\': 30, \'DEBUG\': 10, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7ffe313cbeb8>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7ffe313cb7f0>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:07:26] WARNING [django.request:182] Not Found: /favicon.ico
+[24/Mar/2016 22:07:26] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern login_user ^$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern main ^main/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern urlList ^urls/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern googleList ^g/$>], [<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>"
+[24/Mar/2016 22:07:26] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern login_user ^$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern main ^main/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern urlList ^urls/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern googleList ^g/$>], [<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[24/Mar/2016 22:07:26] WARNING [django.request:182] Not Found: /favicon.ico
+[24/Mar/2016 22:07:26] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern login_user ^$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern main ^main/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern urlList ^urls/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern googleList ^g/$>], [<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>"
+[24/Mar/2016 22:07:26] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern login_user ^$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern main ^main/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern urlList ^urls/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern googleList ^g/$>], [<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[24/Mar/2016 22:07:36] DEBUG [django.db.backends:89] (0.001) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."email" = 'murukessanap@gmail.com'; args=('murukessanap@gmail.com',)
+[24/Mar/2016 22:07:36] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz' LIMIT 1; args=('aitskwhbkm13pgl059aiqtzwj6grcxnz',)
+[24/Mar/2016 22:07:36] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:07:36] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'aitskwhbkm13pgl059aiqtzwj6grcxnz', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 16:37:36.633528'; args=('aitskwhbkm13pgl059aiqtzwj6grcxnz', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 16:37:36.633528')
+[24/Mar/2016 22:07:36] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz'; args=('aitskwhbkm13pgl059aiqtzwj6grcxnz',)
+[24/Mar/2016 22:07:36] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:07:36] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('aitskwhbkm13pgl059aiqtzwj6grcxnz'); args=('aitskwhbkm13pgl059aiqtzwj6grcxnz',)
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.000) UPDATE "accounts_user" SET "last_login" = '2016-03-24 16:37:37.031469' WHERE "accounts_user"."id" = 1; args=('2016-03-24 16:37:37.031469', 1)
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.000) UPDATE "django_session" SET "session_data" = 'OWNkNWJmNTQyZjdhNzk1ZTBlMWVmYjAxYjE0YjcxYTQyZGUyZWE3Mzp7Il9hdXRoX3VzZXJfaGFzaCI6IjQxOGEwNzIyMjA5MzIwZTUzODg3MzUyYzRlZWQxZTViMjFlZDNhOTgiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=', "expire_date" = '2016-04-07 16:37:37.223243' WHERE "django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz'; args=('OWNkNWJmNTQyZjdhNzk1ZTBlMWVmYjAxYjE0YjcxYTQyZGUyZWE3Mzp7Il9hdXRoX3VzZXJfaGFzaCI6IjQxOGEwNzIyMjA5MzIwZTUzODg3MzUyYzRlZWQxZTViMjFlZDNhOTgiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=', '2016-04-07 16:37:37.223243', 'aitskwhbkm13pgl059aiqtzwj6grcxnz')
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'aitskwhbkm13pgl059aiqtzwj6grcxnz', 'OWNkNWJmNTQyZjdhNzk1ZTBlMWVmYjAxYjE0YjcxYTQyZGUyZWE3Mzp7Il9hdXRoX3VzZXJfaGFzaCI6IjQxOGEwNzIyMjA5MzIwZTUzODg3MzUyYzRlZWQxZTViMjFlZDNhOTgiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=', '2016-04-07 16:37:37.223243'; args=('aitskwhbkm13pgl059aiqtzwj6grcxnz', 'OWNkNWJmNTQyZjdhNzk1ZTBlMWVmYjAxYjE0YjcxYTQyZGUyZWE3Mzp7Il9hdXRoX3VzZXJfaGFzaCI6IjQxOGEwNzIyMjA5MzIwZTUzODg3MzUyYzRlZWQxZTViMjFlZDNhOTgiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=', '2016-04-07 16:37:37.223243')
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz' AND "django_session"."expire_date" > '2016-03-24 16:37:37.416903'); args=('aitskwhbkm13pgl059aiqtzwj6grcxnz', '2016-03-24 16:37:37.416903')
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:07:37] WARNING [django.request:182] Not Found: /g
+[24/Mar/2016 22:07:37] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern login_user ^$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern main ^main/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern urlList ^urls/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern googleList ^g/$>], [<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'g'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>"
+[24/Mar/2016 22:07:37] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern login_user ^$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern main ^main/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern urlList ^urls/$>], [<RegexURLResolver <module 'collobSearch.urls' from '/home/murukessan/djangogirls/collobSearch/collobSearch/urls.py'> (None:None) >, <RegexURLPattern googleList ^g/$>], [<RegexURLResolver <module 'accounts.urls' from '/home/murukessan/djangogirls/collobSearch/accounts/urls.py'> (None:None) ^register/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'g'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 887, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz' AND "django_session"."expire_date" > '2016-03-24 16:37:37.446415'); args=('aitskwhbkm13pgl059aiqtzwj6grcxnz', '2016-03-24 16:37:37.446415')
+[24/Mar/2016 22:07:37] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:10:33] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz' AND "django_session"."expire_date" > '2016-03-24 16:40:33.308340'); args=('aitskwhbkm13pgl059aiqtzwj6grcxnz', '2016-03-24 16:40:33.308340')
+[24/Mar/2016 22:10:33] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:13:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz' AND "django_session"."expire_date" > '2016-03-24 16:43:28.933317'); args=('aitskwhbkm13pgl059aiqtzwj6grcxnz', '2016-03-24 16:43:28.933317')
+[24/Mar/2016 22:13:28] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:13:28] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'aitskwhbkm13pgl059aiqtzwj6grcxnz'; args=('aitskwhbkm13pgl059aiqtzwj6grcxnz',)
+[24/Mar/2016 22:13:28] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:13:28] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('aitskwhbkm13pgl059aiqtzwj6grcxnz'); args=('aitskwhbkm13pgl059aiqtzwj6grcxnz',)
+[24/Mar/2016 22:13:29] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: \'btBisyNLyFIoEmvGWZJAdJkbt1aW94Or\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7ffe30366a20>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7ffe303669e8>, \'request\': <WSGIRequest: GET \'/\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'WARNING\': 30, \'DEBUG\': 10, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7ffe30321da0>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7ffe302a7390>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:33:49] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:33:49] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:34:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:34:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:36:52] DEBUG [django.db.backends:89] (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:36:52] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:36:59] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:36:59] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:45:10] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:45:10] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:45:45] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:45:45] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:49:13] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[24/Mar/2016 22:49:13] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[24/Mar/2016 22:49:20] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f71440c3978>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f71440c3eb8>, \'csrf_token\': <SimpleLazyObject: \'btBisyNLyFIoEmvGWZJAdJkbt1aW94Or\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f7144069ef0>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f7144069828>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:49:27] DEBUG [django.db.backends:89] (0.001) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."email" = 'murukessanap@gmail.com'; args=('murukessanap@gmail.com',)
+[24/Mar/2016 22:49:27] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p' LIMIT 1; args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p',)
+[24/Mar/2016 22:49:27] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:49:27] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:19:27.811734'; args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:19:27.811734')
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p'; args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p',)
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('j5ay1mz6yalmi4x0kw8h684ob1r61w5p'); args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p',)
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) UPDATE "accounts_user" SET "last_login" = '2016-03-24 17:19:28.254684' WHERE "accounts_user"."id" = 1; args=('2016-03-24 17:19:28.254684', 1)
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) UPDATE "django_session" SET "session_data" = 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', "expire_date" = '2016-04-07 17:19:28.445201' WHERE "django_session"."session_key" = 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p'; args=('MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:19:28.445201', 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p')
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:19:28.445201'; args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:19:28.445201')
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p' AND "django_session"."expire_date" > '2016-03-24 17:19:28.638556'); args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p', '2016-03-24 17:19:28.638556')
+[24/Mar/2016 22:49:28] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:49:37] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p' AND "django_session"."expire_date" > '2016-03-24 17:19:37.693425'); args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p', '2016-03-24 17:19:37.693425')
+[24/Mar/2016 22:49:37] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:50:14] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p' AND "django_session"."expire_date" > '2016-03-24 17:20:14.880342'); args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p', '2016-03-24 17:20:14.880342')
+[24/Mar/2016 22:50:14] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:50:14] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'j5ay1mz6yalmi4x0kw8h684ob1r61w5p'; args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p',)
+[24/Mar/2016 22:50:14] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:50:14] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('j5ay1mz6yalmi4x0kw8h684ob1r61w5p'); args=('j5ay1mz6yalmi4x0kw8h684ob1r61w5p',)
+[24/Mar/2016 22:50:15] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f713ab25f28>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f713ab255c0>, \'csrf_token\': <SimpleLazyObject: \'Y8FKtqDYDi1I6oqFWRFaWCgUoldRJk5f\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f713ab29780>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f713ab29d30>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:53:22] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f713ab29d30>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f713ab290b8>, \'csrf_token\': <SimpleLazyObject: \'Y8FKtqDYDi1I6oqFWRFaWCgUoldRJk5f\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f713ab29dd8>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f713ab2f160>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:53:29] DEBUG [django.db.backends:89] (0.001) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."email" = 'murukessanap@gmail.com'; args=('murukessanap@gmail.com',)
+[24/Mar/2016 22:53:29] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '10fk1qmyrsjnis5ztfdrg36o2znrezxg' LIMIT 1; args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg',)
+[24/Mar/2016 22:53:29] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:53:29] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '10fk1qmyrsjnis5ztfdrg36o2znrezxg', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:23:29.941599'; args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:23:29.941599')
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '10fk1qmyrsjnis5ztfdrg36o2znrezxg'; args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg',)
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('10fk1qmyrsjnis5ztfdrg36o2znrezxg'); args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg',)
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) UPDATE "accounts_user" SET "last_login" = '2016-03-24 17:23:30.346159' WHERE "accounts_user"."id" = 1; args=('2016-03-24 17:23:30.346159', 1)
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) UPDATE "django_session" SET "session_data" = 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', "expire_date" = '2016-04-07 17:23:30.536521' WHERE "django_session"."session_key" = '10fk1qmyrsjnis5ztfdrg36o2znrezxg'; args=('MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:23:30.536521', '10fk1qmyrsjnis5ztfdrg36o2znrezxg')
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '10fk1qmyrsjnis5ztfdrg36o2znrezxg', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:23:30.536521'; args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:23:30.536521')
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '10fk1qmyrsjnis5ztfdrg36o2znrezxg' AND "django_session"."expire_date" > '2016-03-24 17:23:30.729857'); args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg', '2016-03-24 17:23:30.729857')
+[24/Mar/2016 22:53:30] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:53:51] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '10fk1qmyrsjnis5ztfdrg36o2znrezxg' AND "django_session"."expire_date" > '2016-03-24 17:23:51.665109'); args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg', '2016-03-24 17:23:51.665109')
+[24/Mar/2016 22:53:51] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:53:53] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '10fk1qmyrsjnis5ztfdrg36o2znrezxg' AND "django_session"."expire_date" > '2016-03-24 17:23:53.733514'); args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg', '2016-03-24 17:23:53.733514')
+[24/Mar/2016 22:53:53] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:53:53] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '10fk1qmyrsjnis5ztfdrg36o2znrezxg'; args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg',)
+[24/Mar/2016 22:53:53] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:53:53] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('10fk1qmyrsjnis5ztfdrg36o2znrezxg'); args=('10fk1qmyrsjnis5ztfdrg36o2znrezxg',)
+[24/Mar/2016 22:53:53] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f713ab2f9b0>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f713ab2ff98>, \'csrf_token\': <SimpleLazyObject: \'IAX1V3Z4kBiKqAbArEP0QyinIagTm3nr\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f713ab2f898>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f713ab33668>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:53:59] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/?next=/search/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f713ab33c50>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f713ab33a90>, \'csrf_token\': <SimpleLazyObject: \'IAX1V3Z4kBiKqAbArEP0QyinIagTm3nr\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f713ab33e10>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f71440699b0>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:54:06] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/?next=/g/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f713ab2fe80>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f713ab2ff28>, \'csrf_token\': <SimpleLazyObject: \'IAX1V3Z4kBiKqAbArEP0QyinIagTm3nr\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f713ab2f9e8>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f713ab255c0>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:54:13] DEBUG [django.db.backends:89] (0.001) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."email" = 'murukessanap@gmail.com'; args=('murukessanap@gmail.com',)
+[24/Mar/2016 22:54:13] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2' LIMIT 1; args=('3re3ebldlxpzxbj61vqex86stnpqfkp2',)
+[24/Mar/2016 22:54:13] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:54:13] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '3re3ebldlxpzxbj61vqex86stnpqfkp2', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:24:13.720775'; args=('3re3ebldlxpzxbj61vqex86stnpqfkp2', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:24:13.720775')
+[24/Mar/2016 22:54:13] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2'; args=('3re3ebldlxpzxbj61vqex86stnpqfkp2',)
+[24/Mar/2016 22:54:13] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:54:13] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('3re3ebldlxpzxbj61vqex86stnpqfkp2'); args=('3re3ebldlxpzxbj61vqex86stnpqfkp2',)
+[24/Mar/2016 22:54:14] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:54:14] DEBUG [django.db.backends:89] (0.000) UPDATE "accounts_user" SET "last_login" = '2016-03-24 17:24:14.125619' WHERE "accounts_user"."id" = 1; args=('2016-03-24 17:24:14.125619', 1)
+[24/Mar/2016 22:54:14] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:54:14] DEBUG [django.db.backends:89] (0.000) UPDATE "django_session" SET "session_data" = 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', "expire_date" = '2016-04-07 17:24:14.315634' WHERE "django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2'; args=('MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:24:14.315634', '3re3ebldlxpzxbj61vqex86stnpqfkp2')
+[24/Mar/2016 22:54:14] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '3re3ebldlxpzxbj61vqex86stnpqfkp2', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:24:14.315634'; args=('3re3ebldlxpzxbj61vqex86stnpqfkp2', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:24:14.315634')
+[24/Mar/2016 22:54:14] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2' AND "django_session"."expire_date" > '2016-03-24 17:24:14.512149'); args=('3re3ebldlxpzxbj61vqex86stnpqfkp2', '2016-03-24 17:24:14.512149')
+[24/Mar/2016 22:54:14] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:54:24] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2' AND "django_session"."expire_date" > '2016-03-24 17:24:24.991560'); args=('3re3ebldlxpzxbj61vqex86stnpqfkp2', '2016-03-24 17:24:24.991560')
+[24/Mar/2016 22:54:24] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:55:14] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2' AND "django_session"."expire_date" > '2016-03-24 17:25:14.567722'); args=('3re3ebldlxpzxbj61vqex86stnpqfkp2', '2016-03-24 17:25:14.567722')
+[24/Mar/2016 22:55:14] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:55:18] ERROR [django.request:284] Internal Server Error: /g/
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/murukessan/djangogirls/collobSearch/collobSearch/views.py", line 53, in googleList
+    for url in google.search(query):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/google/__init__.py", line 280, in search
+    anchors = soup.find(id='search').findAll('a')
+AttributeError: 'NoneType' object has no attribute 'findAll'
+[24/Mar/2016 22:55:25] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2' AND "django_session"."expire_date" > '2016-03-24 17:25:25.249326'); args=('3re3ebldlxpzxbj61vqex86stnpqfkp2', '2016-03-24 17:25:25.249326')
+[24/Mar/2016 22:55:25] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:55:29] ERROR [django.request:284] Internal Server Error: /g/
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/murukessan/djangogirls/collobSearch/collobSearch/views.py", line 53, in googleList
+    for url in google.search(query):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/google/__init__.py", line 280, in search
+    anchors = soup.find(id='search').findAll('a')
+AttributeError: 'NoneType' object has no attribute 'findAll'
+[24/Mar/2016 22:55:32] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2' AND "django_session"."expire_date" > '2016-03-24 17:25:32.260481'); args=('3re3ebldlxpzxbj61vqex86stnpqfkp2', '2016-03-24 17:25:32.260481')
+[24/Mar/2016 22:55:32] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:55:32] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '3re3ebldlxpzxbj61vqex86stnpqfkp2'; args=('3re3ebldlxpzxbj61vqex86stnpqfkp2',)
+[24/Mar/2016 22:55:32] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:55:32] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('3re3ebldlxpzxbj61vqex86stnpqfkp2'); args=('3re3ebldlxpzxbj61vqex86stnpqfkp2',)
+[24/Mar/2016 22:55:32] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f713a9b0940>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f713a9cd128>, \'csrf_token\': <SimpleLazyObject: \'21En4yby86C65mW7u0AIGNbWjxAyqyQu\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f713a9b0908>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f713aa2a940>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.002) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."email" = 'murukessanap@gmail.com'; args=('murukessanap@gmail.com',)
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'w1arw7p37awlj5ere7vamwxtwwzpdq50' LIMIT 1; args=('w1arw7p37awlj5ere7vamwxtwwzpdq50',)
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'w1arw7p37awlj5ere7vamwxtwwzpdq50', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:25:39.404143'; args=('w1arw7p37awlj5ere7vamwxtwwzpdq50', 'NWVlZWMxZDI3ZThjM2ZkMTE1OTk0YWJmMjBmMDJlYTA2NWZiZDUzMTp7fQ==', '2016-04-07 17:25:39.404143')
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'w1arw7p37awlj5ere7vamwxtwwzpdq50'; args=('w1arw7p37awlj5ere7vamwxtwwzpdq50',)
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('w1arw7p37awlj5ere7vamwxtwwzpdq50'); args=('w1arw7p37awlj5ere7vamwxtwwzpdq50',)
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) UPDATE "accounts_user" SET "last_login" = '2016-03-24 17:25:39.809471' WHERE "accounts_user"."id" = 1; args=('2016-03-24 17:25:39.809471', 1)
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) UPDATE "django_session" SET "session_data" = 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', "expire_date" = '2016-04-07 17:25:39.988631' WHERE "django_session"."session_key" = 'w1arw7p37awlj5ere7vamwxtwwzpdq50'; args=('MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:25:39.988631', 'w1arw7p37awlj5ere7vamwxtwwzpdq50')
+[24/Mar/2016 22:55:39] DEBUG [django.db.backends:89] (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'w1arw7p37awlj5ere7vamwxtwwzpdq50', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:25:39.988631'; args=('w1arw7p37awlj5ere7vamwxtwwzpdq50', 'MWMyZmJlM2UxZjU0Y2MwNjU2YmM5MzFhNTQwNjM5ODAwNDI4N2MwZTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiI0MThhMDcyMjIwOTMyMGU1Mzg4NzM1MmM0ZWVkMWU1YjIxZWQzYTk4In0=', '2016-04-07 17:25:39.988631')
+[24/Mar/2016 22:55:40] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'w1arw7p37awlj5ere7vamwxtwwzpdq50' AND "django_session"."expire_date" > '2016-03-24 17:25:40.185977'); args=('w1arw7p37awlj5ere7vamwxtwwzpdq50', '2016-03-24 17:25:40.185977')
+[24/Mar/2016 22:55:40] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:55:45] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'w1arw7p37awlj5ere7vamwxtwwzpdq50' AND "django_session"."expire_date" > '2016-03-24 17:25:45.139236'); args=('w1arw7p37awlj5ere7vamwxtwwzpdq50', '2016-03-24 17:25:45.139236')
+[24/Mar/2016 22:55:45] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:56:25] DEBUG [django.db.backends:89] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'w1arw7p37awlj5ere7vamwxtwwzpdq50' AND "django_session"."expire_date" > '2016-03-24 17:26:25.907884'); args=('w1arw7p37awlj5ere7vamwxtwwzpdq50', '2016-03-24 17:26:25.907884')
+[24/Mar/2016 22:56:25] DEBUG [django.db.backends:89] (0.000) SELECT "accounts_user"."id", "accounts_user"."password", "accounts_user"."last_login", "accounts_user"."email", "accounts_user"."joined", "accounts_user"."is_active", "accounts_user"."is_admin", "accounts_user"."area_of_interest" FROM "accounts_user" WHERE "accounts_user"."id" = 1; args=(1,)
+[24/Mar/2016 22:56:25] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'w1arw7p37awlj5ere7vamwxtwwzpdq50'; args=('w1arw7p37awlj5ere7vamwxtwwzpdq50',)
+[24/Mar/2016 22:56:25] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[24/Mar/2016 22:56:25] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('w1arw7p37awlj5ere7vamwxtwwzpdq50'); args=('w1arw7p37awlj5ere7vamwxtwwzpdq50',)
+[24/Mar/2016 22:56:26] DEBUG [django.template:923] Exception while resolving variable 'next' in template 'collobSearch/login.html'.
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 879, in _resolve_lookup
+    current = current[bit]
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 894, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/murukessan/djangogirls/myvenv/lib/python3.4/site-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [next] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'request\': <WSGIRequest: GET \'/\'>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f713a8aaef0>, \'user\': <django.contrib.auth.models.AnonymousUser object at 0x7f713a8aada0>, \'csrf_token\': <SimpleLazyObject: \'ERhU1l4hZjMLoKSHuy8BK9nZpJICMgvN\'>, \'DEFAULT_MESSAGE_LEVELS\': {\'INFO\': 20, \'DEBUG\': 10, \'WARNING\': 30, \'ERROR\': 40, \'SUCCESS\': 25}, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f713a8ae5c0>}, {}, {\'block\': <Block Node: main. Contents: [<TextNode: \'\\n    <div id="login">\\n   \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f713a8aebe0>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        <div class="cont\'>]>}]'

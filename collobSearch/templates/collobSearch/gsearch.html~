@@ -1,0 +1,11 @@
+<form class="form-horizontal" action="/g/" method="post">
+        {% csrf_token %}
+            <a href="/">logout</a>
+            <label class="control-label" for="username">Search</label>
+            <div class="controls">
+                <input type="text" id="query" name="query"  placeholder="enter query string">
+            </div>
+            <div class="controls">
+                <button type="submit" class="btn">Login</button>
+            </div>
+</form>

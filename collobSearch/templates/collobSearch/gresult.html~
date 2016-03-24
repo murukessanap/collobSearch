@@ -1,0 +1,16 @@
+<html>
+    <head>
+      <title>Home page of CollobSearch</title>
+    </head>
+    <body>
+      <a href="/">logout</a><br />
+      <div>
+        <h1><a href="/">List Of URLS</a></h1>
+      </div>
+      <ol>
+      {% for url in urls %}
+        <li><a href="{{ url }}" target="_blank">{{ url }}</a></li>
+      {% endfor %}
+      </ol>
+    </body>
+</html>
