@@ -317,11 +317,11 @@ def search(query, tld='com', lang='en', tbs='0', safe='off', num=10, start=0,
         else:
             url = url_next_page_num % vars()
 
-query=input("Enter query string::")
+'''query=input("Enter query string::")
 count=int(input("Enter count::"))
 i=0
 for url in search(query,tld="co.in"):
     print(url)
     i=i+1
     if i==count:
-        break        
+        break        '''

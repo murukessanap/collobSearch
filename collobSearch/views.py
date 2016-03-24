@@ -10,7 +10,7 @@ from collobSearch.models import UrlMap
 #from collobSearch.models import Searcher
 from accounts.models import User
 from .forms import LoginForm
-import google
+from .google import search
 
 @login_required(login_url='/')
 def urlList(request):
@@ -50,7 +50,7 @@ def googleList(request):
         query=request.POST.get("query", "")
     count=50
     i=0
-    for url in google.search(query):
+    for url in search(query):
         urls.append(url)
         i=i+1
         if count==i:
